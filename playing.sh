@@ -1,6 +1,8 @@
 #!/bin/bash
+
+#set our variables
 mpdnp="$(/usr/local/bin/mpc | grep -)"
-spotifynp="$(/Users/ryan/scripts/SpotifyControlTmux info)"
+spotifynp="$($HOME/scripts/SpotifyControl info)"
 foo=0
 foo2=0
 
@@ -12,7 +14,7 @@ else
 fi
 
 
-/Users/ryan/scripts/SpotifyControlOriginal info | grep 'playing' &> /dev/null
+$HOME/scripts/SpotifyControlOriginal info | grep 'playing' &> /dev/null
 if [ $? == 0 ]; then
 	echo $spotifynp
 else 
